@@ -45,7 +45,7 @@ i = 0
 haste = massa()
 
 while not closed: 
-    clock.tick(120)
+    clock.tick(20)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             closed = True 

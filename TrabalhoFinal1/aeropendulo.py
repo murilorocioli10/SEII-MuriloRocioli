@@ -66,7 +66,7 @@ def saida(ang): #Definindo função de saída no pendulo
         #CONTROLADOR PID Discreto
         e[k] = phi_ref - x[0][k]  # erro da referência
         
-        u[k] = Kp*e[k] + Ki*(e[k] + e1) + Kd*(e[k] - e1) + u_eq # ação de controle -> equação de diferenças
+        u[k] = Kp*e[k] + Ki*(e[k] + e1) + Kd*(e[k] - e1)  # ação de controle -> equação de diferenças
 
         e1 = e[k]
         x[:,k+1] = rk4(t[k], h, x[:,k], u[k]) # saída da planta
